@@ -6,6 +6,6 @@ defmodule ScienceExplorerImporter do
   application and its Dynamos.
   """
   def start(_type, _args) do
-    ScienceExplorerImporter.Dynamo.start_link([max_restarts: 5, max_seconds: 5])
+    ScienceExplorerImporter.Sup.start_link
   end
 end
