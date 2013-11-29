@@ -1,6 +1,6 @@
 defmodule ApplicationRouter do
   use Dynamo.Router
-  alias ScienceExplorerImporter.Items
+  alias ScienceExplorer.Items
 
   filter JSON.Dynamo.Filter
 

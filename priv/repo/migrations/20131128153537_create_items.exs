@@ -1,4 +1,4 @@
-defmodule ScienceExplorerImporter.Repo.Migrations.CreateItems do
+defmodule ScienceExplorer.Repo.Migrations.CreateItems do
   use Ecto.Migration
 
   def up do

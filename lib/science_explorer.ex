@@ -1,4 +1,4 @@
-defmodule ScienceExplorerImporter do
+defmodule ScienceExplorer do
   use Application.Behaviour
 
   @doc """
@@ -6,6 +6,6 @@ defmodule ScienceExplorerImporter do
   application and its Dynamos.
   """
   def start(_type, _args) do
-    ScienceExplorerImporter.Sup.start_link
+    ScienceExplorer.Sup.start_link
   end
 end

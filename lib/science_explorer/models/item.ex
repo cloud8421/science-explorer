@@ -1,4 +1,4 @@
-defmodule ScienceExplorerImporter.Item do
+defmodule ScienceExplorer.Item do
   use Ecto.Model
 
   validate item,

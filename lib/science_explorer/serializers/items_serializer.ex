@@ -1,4 +1,4 @@
-defmodule ScienceExplorerImporter.ItemsSerializer do
+defmodule ScienceExplorer.ItemsSerializer do
   def serialize_list(list) do
     do_serialize_list(list)
   end

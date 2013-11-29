@@ -1,4 +1,4 @@
-defmodule ScienceExplorerImporter.Sup do
+defmodule ScienceExplorer.Sup do
   use Supervisor.Behaviour
 
   def start_link do
@@ -6,7 +6,7 @@ defmodule ScienceExplorerImporter.Sup do
   end
 
   def init([]) do
-    tree = [ worker(ScienceExplorerImporter.Dynamo, []), worker(ScienceExplorerImporter.Repo, []) ]
+    tree = [ worker(ScienceExplorer.Dynamo, []), worker(ScienceExplorer.Repo, []) ]
     supervise(tree, strategy: :one_for_all)
   end
 end

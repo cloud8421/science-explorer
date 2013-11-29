@@ -1,4 +1,4 @@
-defmodule ScienceExplorerImporter.Repo do
+defmodule ScienceExplorer.Repo do
   use Ecto.Repo, adapter: Ecto.Adapters.Postgres
 
   def priv do

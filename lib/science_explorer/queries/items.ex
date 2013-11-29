@@ -1,9 +1,9 @@
-defmodule ScienceExplorerImporter.Items do
+defmodule ScienceExplorer.Items do
   import Ecto.Query
 
-  alias ScienceExplorerImporter.Item
-  alias ScienceExplorerImporter.Repo
-  alias ScienceExplorerImporter.ItemsSerializer
+  alias ScienceExplorer.Item
+  alias ScienceExplorer.Repo
+  alias ScienceExplorer.ItemsSerializer
 
   def all(limit // 50) do
     do_all(limit) |> ItemsSerializer.serialize_list

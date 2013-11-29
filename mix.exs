@@ -1,11 +1,11 @@
-defmodule ScienceExplorerImporter.Mixfile do
+defmodule ScienceExplorer.Mixfile do
   use Mix.Project
 
   def project do
     [ app: :science_explorer_importer,
       version: "0.0.1",
       build_per_environment: true,
-      dynamos: [ScienceExplorerImporter.Dynamo],
+      dynamos: [ScienceExplorer.Dynamo],
       compilers: [:elixir, :dynamo, :app],
       deps: deps ]
   end
@@ -13,7 +13,7 @@ defmodule ScienceExplorerImporter.Mixfile do
   # Configuration for the OTP application
   def application do
     [ applications: [:cowboy, :dynamo],
-      mod: { ScienceExplorerImporter, [] } ]
+      mod: { ScienceExplorer, [] } ]
   end
 
   defp deps do

@@ -1,6 +1,6 @@
 defmodule ItemTest do
   use ExUnit.Case, async: true
-  alias ScienceExplorerImporter.Item
+  alias ScienceExplorer.Item
 
   test "it validates presence of name" do
     assert Item.validate(Item.Entity[]) == [name: "can't be blank", title: "can't be blank"]

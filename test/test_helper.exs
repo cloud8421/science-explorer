@@ -1,8 +1,8 @@
-Dynamo.under_test(ScienceExplorerImporter.Dynamo)
+Dynamo.under_test(ScienceExplorer.Dynamo)
 Dynamo.Loader.enable
 ExUnit.start
 
-defmodule ScienceExplorerImporter.TestCase do
+defmodule ScienceExplorer.TestCase do
   use ExUnit.CaseTemplate
 
   # Enable code reloading on test cases

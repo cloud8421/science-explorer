@@ -1,4 +1,4 @@
-defmodule ScienceExplorerImporter.Dynamo do
+defmodule ScienceExplorer.Dynamo do
   use Dynamo
 
   config :dynamo,
