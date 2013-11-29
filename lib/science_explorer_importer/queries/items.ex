@@ -3,14 +3,15 @@ defmodule ScienceExplorerImporter.Items do
 
   alias ScienceExplorerImporter.Item
   alias ScienceExplorerImporter.Repo
+  alias ScienceExplorerImporter.ItemsSerializer
 
-  def all do
-    Enum.map(_all, fn(x) -> { x.id, x.name } end)
+  def all(limit // 50) do
+    do_all(limit) |> ItemsSerializer.serialize_list
   end
 
-  def _all do
+  defp do_all(limit) do
     query = from item in Item,
             select: item
-    Repo.all(query)
+    Repo.all(from q in query, limit: limit)
   end
 end

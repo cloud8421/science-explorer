@@ -4,6 +4,7 @@
   "ecto": {:git, "git://github.com/elixir-lang/ecto.git", "8815296e70a984a410c00dc2189a7ac0024e32e6", []},
   "elixir_csv": {:git, "git://github.com/baldmountain/elixir_csv.git", "9dc936a4f124671303553003b0c4d9095c0e055d", []},
   "hackney": {:git, "git://github.com/benoitc/hackney.git", "5b0f7eb949ebebd6fabfbc4e08a7b7231850606a", []},
+  "json": {:git, "git://github.com/cblage/elixir-json.git", "9b55d6439ce61d7712a1218766c5cfffe011d070", []},
   "mimetypes": {:git, "git://github.com/spawngrid/mimetypes.git", "47d37a977a7d633199822bf6b08353007483d00f", []},
   "poolboy": {:git, "git://github.com/devinus/poolboy.git", "c2c939b51aba06790ca51fa78b14c254a6ea977d", []},
   "postgrex": {:git, "git://github.com/ericmj/postgrex.git", "3424ee5334af9f52cde3a2f90a452e73fd20be0f", []},

@@ -21,6 +21,7 @@ defmodule ScienceExplorerImporter.Mixfile do
       { :elixir_csv, github: "baldmountain/elixir_csv" },
       { :postgrex, github: "ericmj/postgrex" },
       { :ecto, github: "elixir-lang/ecto"},
+      { :json,   github: "cblage/elixir-json"},
       { :dynamo, "~> 0.1.0-dev", github: "elixir-lang/dynamo" } ]
   end
 end

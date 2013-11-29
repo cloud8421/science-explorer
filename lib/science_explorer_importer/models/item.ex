@@ -2,7 +2,8 @@ defmodule ScienceExplorerImporter.Item do
   use Ecto.Model
 
   validate item,
-    name: present()
+    name: present(),
+    title: present()
 
   queryable "items" do
     field :name, :string
