@@ -8,12 +8,12 @@ defmodule ScienceExplorerImporter.Repo.Migrations.CreateItems do
       name text,
       title text,
       maker text,
-      date_of_manufacturing date,
+      date_of_manufacturing text,
       place text,
       materials text,
       measurements text,
       description text,
-      whole_part status,
+      whole_part text,
       collection text
     );
     """
