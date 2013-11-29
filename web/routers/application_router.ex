@@ -1,5 +1,6 @@
 defmodule ApplicationRouter do
   use Dynamo.Router
+  alias ScienceExplorerImporter.Items
 
   prepare do
     # Pick which parts of the request you want to fetch
@@ -14,6 +15,6 @@ defmodule ApplicationRouter do
 
   get "/" do
     conn = conn.assign(:title, "Welcome to Dynamo!")
-    render conn, "index.html"
+    render conn, "index.html", items: Items.all
   end
 end

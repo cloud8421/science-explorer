@@ -18,6 +18,7 @@ defmodule ScienceExplorerImporter.Mixfile do
 
   defp deps do
     [ { :cowboy, github: "extend/cowboy" },
+      { :elixir_csv, github: "baldmountain/elixir_csv" },
       { :postgrex, github: "ericmj/postgrex" },
       { :ecto, github: "elixir-lang/ecto"},
       { :dynamo, "~> 0.1.0-dev", github: "elixir-lang/dynamo" } ]

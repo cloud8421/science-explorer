@@ -5,7 +5,10 @@
   <link rel="shortcut icon" href="/static/favicon.ico" />
 </head>
 <body>
-  <h3>Welcome to Dynamo!</h3>
+  <h3>Welcome to Dynamo!!!</h3>
+  <%= lc { _id, name } inlist @items do %>
+    <p><%= name %></p>
+  <% end %>
   <ol>
     <li>Change this template at <code>web/templates/index.html.eex</code></li>
     <li>Add new routes at <code>web/routers/application_router.ex</code></li>
