@@ -3,4 +3,5 @@
 /tmp/dev
 /tmp/test
 /_build/dev
+/data
 erl_crash.dump

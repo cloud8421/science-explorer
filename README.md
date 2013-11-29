@@ -2,6 +2,10 @@
 
 This is a project built with Elixir that uses Dynamo to serve web requests.
 
+# Converting the original files
+
+    iconv -f ISO-8859-1 -t UTF-8 data/items1.csv > data/items1-utf8.csv
+
 Resources:
 
 * [Elixir website](http://elixir-lang.org/)
