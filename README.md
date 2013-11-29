@@ -8,9 +8,16 @@ Being built with Elixir, Dynamo and Postgresql.
 
 Assuming all dependencies are met:
 
+    cp .envrc.sample .envrc
+
+Customize `.envrc` with your database connection data.
+
+    source .envrc
     mix deps.get
     make import
-    mix server
+    enmix server
+
+Alternatively, your env can be better managed with [Direnv](https://github.com/zimbatm/direnv).
 
 ## Converting the original files
 

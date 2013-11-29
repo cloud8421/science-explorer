@@ -1,0 +1,1 @@
+export POSTGRES_URL='user@localhost/science-explorer-items'
