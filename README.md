@@ -1,8 +1,21 @@
 # ScienceExplorer
 
-This is a project built with Elixir that uses Dynamo to serve web requests.
+Small webapp to browse the London Science Museum items collection.
 
-# Converting the original files
+Data is available at: <http://api.sciencemuseum.org.uk/documentation/collections/>.
+
+Being built with Elixir, Dynamo and Postgresql.
+
+Assuming all dependencies are met:
+
+    mix deps.get
+    make import
+    mix server
+
+## Converting the original files
+
+The original dataset is in Latin1, so it needs to be converted to utf-8 before being
+imported.
 
     iconv -f ISO-8859-1 -t UTF-8 data/items1.csv > data/items1-utf8.csv
 
