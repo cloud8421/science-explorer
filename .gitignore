@@ -4,6 +4,7 @@
 /tmp/test
 /_build/dev
 /_build/test
+/_build/prod
 /data
 erl_crash.dump
 .envrc
