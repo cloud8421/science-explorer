@@ -2,7 +2,7 @@
 
 Small webapp to browse the London Science Museum items collection.
 
-Data is available at: <http://api.sciencemuseum.org.uk/documentation/collections/>.
+Data is available at: <http://api.sciencemuseum.org.uk/documentation/collections/> in csv format.
 
 Being built with Elixir, Dynamo and Postgresql.
 
@@ -14,12 +14,19 @@ Customize `.envrc` with your database connection data.
 
     source .envrc
     mix deps.get
-    make import
-    enmix server
+    make dev_setup
+    mix server
 
 Alternatively, your env can be better managed with [Direnv](https://github.com/zimbatm/direnv).
 
+## Running tests
+
+    make test_setup
+    MIX_ENV=test mix test
+
 ## Converting the original files
+
+Place any file in `data/` and rename it `items1.csv` (hardcoded for now).
 
 The original dataset is in Latin1, so it needs to be converted to utf-8 before being
 imported.
