@@ -1,4 +1,4 @@
-defmodule ScienceExplorer.Items do
+defmodule ScienceExplorer.ItemsQueries do
   import Ecto.Query
 
   alias ScienceExplorer.Item

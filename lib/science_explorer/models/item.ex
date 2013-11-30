@@ -1,6 +1,9 @@
 defmodule ScienceExplorer.Item do
   use Ecto.Model
 
+  alias ScienceExplorer.CollectionsQueries
+  alias ScienceExplorer.Repo
+
   validate item,
     name: present(),
     title: present()
@@ -15,12 +18,14 @@ defmodule ScienceExplorer.Item do
     field :measurements, :string
     field :description, :string
     field :whole_part, :string
-    field :collection, :string
+
+    belongs_to :collection, ScienceExplorer.Collection
   end
 
   def import_from_csv_string(csv_string) do
     data = CSV.parse(csv_string) |> List.flatten
-    new(
+    collection = Enum.at(data, 10) |> CollectionsQueries.find_or_create_by_name
+    item = new(
       name: Enum.at(data, 1),
       title: Enum.at(data, 2),
       maker: Enum.at(data, 3),
@@ -30,8 +35,9 @@ defmodule ScienceExplorer.Item do
       measurements: Enum.at(data, 7),
       description: Enum.at(data, 8),
       whole_part: Enum.at(data, 9),
-      collection: Enum.at(data, 10)
+      collection_id: collection.id
     )
+    Repo.create(item)
   end
 
 end

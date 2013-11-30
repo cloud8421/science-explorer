@@ -10,8 +10,7 @@ defmodule Mix.Tasks.Import do
     ScienceExplorer.Repo.start_link
     stream = File.stream!("data/items1-utf8.csv")
     Enum.each stream, fn(line) ->
-      item = ScienceExplorer.Item.import_from_csv_string(line)
-      ScienceExplorer.Repo.create(item)
+      ScienceExplorer.Item.import_from_csv_string(line)
     end
   end
 end
