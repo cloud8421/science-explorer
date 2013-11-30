@@ -13,7 +13,8 @@ defmodule ScienceExplorer.ItemsSerializer do
       id: item.id,
       name: item.name,
       title: item.title,
-      description: item.description
+      description: item.description,
+      collection: item.collection.get.name
     ]
   end
 end

@@ -12,6 +12,6 @@ defmodule ScienceExplorer.ItemsQueries do
   defp do_all(limit) do
     query = from item in Item,
             select: item
-    Repo.all(from q in query, limit: limit)
+    Repo.all(from q in query, preload: [:collection], limit: limit)
   end
 end
