@@ -18,7 +18,7 @@ defmodule ApplicationRouter do
 
   get "/" do
     conn = conn.assign(:title, "Welcome to Dynamo!")
-    render conn, "index.html", items: ItemsQueries.all |> ItemPresenter.wrap_list
+    render conn, "index.html", items: ItemsQueries.all
   end
 
   get "/items" do

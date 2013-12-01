@@ -6,8 +6,8 @@
 </head>
 <body>
   <h3>Welcome to Dynamo!!!</h3>
-  <%= lc { _id, name } inlist @items do %>
-    <p><%= name %></p>
+  <%= Enum.map @items, fn(item) -> %>
+    <p><%= item.name %></p>
   <% end %>
   <ol>
     <li>Change this template at <code>web/templates/index.html.eex</code></li>
