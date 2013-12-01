@@ -20,7 +20,6 @@ defmodule ItemTest do
     assert user.measurements == ""
     assert user.description == "Ansonia Sunwatch (pocket compass dial)"
     assert user.whole_part == "WHOLE"
-    # assert user.collection == "SCM - Time Measurement"
   end
 
 end

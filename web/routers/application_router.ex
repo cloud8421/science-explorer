@@ -1,6 +1,7 @@
 defmodule ApplicationRouter do
   use Dynamo.Router
   alias ScienceExplorer.ItemsQueries
+  alias ScienceExplorer.ItemPresenter
 
   filter JSON.Dynamo.Filter
 
@@ -17,11 +18,11 @@ defmodule ApplicationRouter do
 
   get "/" do
     conn = conn.assign(:title, "Welcome to Dynamo!")
-    render conn, "index.html", items: ItemsQueries.all
+    render conn, "index.html", items: ItemsQueries.all |> ItemPresenter.wrap_list
   end
 
   get "/items" do
-    conn.put_private :result_object, ItemsQueries.all
+    conn.put_private :result_object, ItemsQueries.all |> ItemPresenter.wrap_list
   end
 
 end

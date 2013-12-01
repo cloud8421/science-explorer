@@ -3,10 +3,9 @@ defmodule ScienceExplorer.ItemsQueries do
 
   alias ScienceExplorer.Item
   alias ScienceExplorer.Repo
-  alias ScienceExplorer.ItemsSerializer
 
   def all(limit // 50) do
-    do_all(limit) |> ItemsSerializer.serialize_list
+    do_all(limit)
   end
 
   defp do_all(limit) do
