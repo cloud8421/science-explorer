@@ -21,6 +21,11 @@ defmodule ApplicationRouter do
     render conn, "index.html", items: ItemsQueries.all
   end
 
+  get "/items/search" do
+    search_string = conn.params[:q]
+    conn.put_private :result_object, ItemsQueries.by_name(search_string) |> ItemPresenter.wrap_list
+  end
+
   get "/items" do
     conn.put_private :result_object, ItemsQueries.all |> ItemPresenter.wrap_list
   end

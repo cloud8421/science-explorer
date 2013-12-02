@@ -16,7 +16,6 @@ defmodule ScienceExplorer.ItemPresenter do
     ]
   end
 
-  defp do_wrap_list([]), do: []
   defp do_wrap_list(list) do
     Enum.map list, &new/1
   end
@@ -28,5 +27,4 @@ defmodule ScienceExplorer.ItemPresenter do
     collection = Repo.get(Collection, item.collection_id)
     collection.name
   end
-
 end
