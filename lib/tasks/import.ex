@@ -22,5 +22,6 @@ defmodule Mix.Tasks.Import do
       end
       Progress.separate("Finished file " <> to_string(index))
     end
+    Progress.finish
   end
 end
