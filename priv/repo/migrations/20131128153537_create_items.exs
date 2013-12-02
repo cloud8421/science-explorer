@@ -14,6 +14,7 @@ defmodule ScienceExplorer.Repo.Migrations.CreateItems do
       measurements text,
       description text,
       whole_part text,
+      original_id text,
       collection_id integer
     );
     """

@@ -19,6 +19,7 @@ defmodule ScienceExplorer.Item do
     field :measurements, :string
     field :description, :string
     field :whole_part, :string
+    field :original_id, :string
 
     belongs_to :collection, ScienceExplorer.Collection
   end
@@ -36,6 +37,7 @@ defmodule ScienceExplorer.Item do
       measurements: Enum.at(data, 7),
       description: Enum.at(data, 8),
       whole_part: Enum.at(data, 9),
+      original_id: Enum.at(data, 0),
       collection_id: collection.id
     )
     Repo.create(item)
