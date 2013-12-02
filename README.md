@@ -33,6 +33,13 @@ imported.
 
     iconv -f ISO-8859-1 -t UTF-8 data/items1.csv > data/items1-utf8.csv
 
+## Deploy on Heroku
+
+Assuming you have the Postgresql addon installed:
+
+    heroku config:set BUILDPACK_URL="https://github.com/cloud8421/heroku-buildpack-elixir.git" -a YOUR_APP_NAME
+    git push heroku master
+
 Resources:
 
 * [Elixir website](http://elixir-lang.org/)
