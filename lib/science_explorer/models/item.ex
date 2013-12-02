@@ -6,7 +6,8 @@ defmodule ScienceExplorer.Item do
 
   validate item,
     name: present(),
-    title: present()
+    title: present(),
+    collection_id: present(message: "An Item needs a collection")
 
   queryable "items" do
     field :name, :string

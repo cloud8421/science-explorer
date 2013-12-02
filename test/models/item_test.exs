@@ -3,7 +3,7 @@ defmodule ItemTest do
   alias ScienceExplorer.Item
 
   test "it validates presence of name" do
-    assert Item.validate(Item.Entity[]) == [name: "can't be blank", title: "can't be blank"]
+    assert Item.validate(Item.Entity[]) == [name: "can't be blank", title: "can't be blank", collection_id: "An Item needs a collection"]
   end
 
   test "it imports from a csv string" do
