@@ -15,7 +15,8 @@ defmodule Mix.Tasks.Import do
       file = "data/items" <> to_string(index) <> "-utf8.csv"
       stream = File.stream!(file)
       Enum.map_reduce stream, 0, fn(line, acc) ->
-        Progress.inc(acc)
+        msg = "Imported " <> to_string(acc) <> " items"
+        Progress.info(msg, acc)
         item = ScienceExplorer.Item.import_from_csv_string(line)
         { item, acc + 1}
       end

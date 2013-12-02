@@ -1,10 +1,4 @@
 defmodule Progress do
-
-  def inc(i) do
-    msg = to_string(i)
-    info(msg, i)
-  end
-
   def header(text) do
     IO.puts IO.ANSI.red <> text
     IO.puts ""
