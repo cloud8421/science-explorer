@@ -11,11 +11,15 @@ defmodule Mix.Tasks.Import do
   def run(_) do
     ScienceExplorer.Repo.start_link
     Enum.map 1..4, fn(index) ->
+      Progress.header("Starting file " <> to_string(index))
       file = "data/items" <> to_string(index) <> "-utf8.csv"
       stream = File.stream!(file)
-      Enum.each stream, fn(line) ->
-        ScienceExplorer.Item.import_from_csv_string(line)
+      Enum.map_reduce stream, 0, fn(line, acc) ->
+        Progress.inc(acc)
+        item = ScienceExplorer.Item.import_from_csv_string(line)
+        { item, acc + 1}
       end
+      Progress.separate("Finished file " <> to_string(index))
     end
   end
 end
