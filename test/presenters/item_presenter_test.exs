@@ -15,8 +15,8 @@ defmodule ItemPresenterTest do
     )
     item = Repo.create(item)
     presented_item = ItemPresenter.new(item)
-    assert presented_item = [
-      id: 1,
+    assert presented_item == [
+      id: item.id,
       name: "Pocket Watch",
       title: "Pocket sundial watch",
       description: "You can check the time with it",
