@@ -2,7 +2,7 @@ defmodule ScienceExplorer.Mixfile do
   use Mix.Project
 
   def project do
-    [ app: :science_explorer_importer,
+    [ app: :science_explorer,
       version: "0.0.1",
       build_per_environment: true,
       dynamos: [ScienceExplorer.Dynamo],

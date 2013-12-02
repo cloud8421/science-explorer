@@ -2,7 +2,7 @@ defmodule ScienceExplorer.Repo do
   use Ecto.Repo, adapter: Ecto.Adapters.Postgres
 
   def priv do
-    app_dir(:science_explorer_importer, "priv/repo")
+    app_dir(:science_explorer, "priv/repo")
   end
 
   def url, do: "ecto://#{pg_url}-#{Mix.env}#{pg_options(Mix.env)}"
