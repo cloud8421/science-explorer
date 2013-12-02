@@ -9,9 +9,16 @@ defmodule ScienceExplorer.ItemPresenter do
   def new(item) do
     [
       id: item.id,
+      original_id: item.original_id,
       name: item.name,
       title: item.title,
+      maker: item.maker,
+      date_of_manufacturing: item.date_of_manufacturing,
+      place: item.place,
+      materials: item.materials,
+      measurements: item.measurements,
       description: item.description,
+      status: item.whole_part,
       collection: associated_collection(item, item.collection.loaded?)
     ]
   end

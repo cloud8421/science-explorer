@@ -17,9 +17,16 @@ defmodule ItemPresenterTest do
     presented_item = ItemPresenter.new(item)
     assert presented_item == [
       id: item.id,
+      original_id: item.original_id,
       name: "Pocket Watch",
       title: "Pocket sundial watch",
+      maker: nil,
+      date_of_manufacturing: nil,
+      place: nil,
+      materials: nil,
+      measurements: nil,
       description: "You can check the time with it",
+      status: nil,
       collection: "Clocks"
     ]
   end
