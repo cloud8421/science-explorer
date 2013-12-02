@@ -5,7 +5,14 @@ defmodule ScienceExplorer.Repo do
     app_dir(:science_explorer, "priv/repo")
   end
 
-  def url, do: "ecto://#{pg_url}-#{Mix.env}#{pg_options(Mix.env)}"
+  def url, do: do_url(Mix.env)
+
+  defp do_url(env) when env == :prod do
+    "ecto://#{System.get_env("DATABASE_URL")}"
+  end
+  defp do_url(env) do
+    "ecto://#{pg_url}-#{Mix.env}#{pg_options(env)}"
+  end
 
   defp pg_url, do: System.get_env("POSTGRES_URL")
 
